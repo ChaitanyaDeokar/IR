@@ -20,3 +20,38 @@ preprocessed_text = ' '.join(stemmed_words)
 
 print("Original Text:", document)
 print("\nPreprocessed Text:", preprocessed_text)
+
+
+
+
+
+
+
+
+
+
+Step 1: Importing Libraries python
+We start by importing some tools that we'll need to work with text. It's like getting the right tools for the job.
+
+Step 2: Download NLTK Resources
+These lines download necessary resources for text processing from the NLTK library. It's like downloading a dictionary before you start reading.
+
+Step 3: Define the Text
+document = """Engineering is 4 year long gap to decide what to do in life."""
+This is the text we want to work with. In this case, it's a sentence about making a decision in life.
+
+Step 4: Tokenization
+We take the sentence and split it into individual words. It's like breaking a sentence into separate words so that we can work with them one by one.
+
+Step 5: Removing Unimportant Words (Stopwords)
+Some words (like "is," "the," "to") don't add much meaning. We remove these words. It's like taking out words that don't help us understand the main message.
+
+Step 6: Stemming
+Sometimes words have different forms (e.g., "engineering" and "engineer"). We group them together by finding their common base form. It's like turning "running" into "run."
+
+Step 7: Joining the Words Back Together
+After all the processing, we put the words back together into a sentence. It's like making the words fit together to form a coherent sentence.
+
+Step 8: Printing the Results
+Finally, we show you the original sentence and the improved version. It's like comparing the original text to the cleaned-up version.
+The goal of this code is to take a sentence, make it easier to work with, and understand by breaking it into words, removing unimportant words, and reducing words to their basic forms. This can be helpful for tasks like searching for specific information or analyzing text.
