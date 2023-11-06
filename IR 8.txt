@@ -65,3 +65,24 @@ q2: This query calculates the probability of 'target' given that 'cp' (chest pai
 Step 7: Print Results
 Finally, you print the results of the two queries. These results represent the probabilities of having heart disease based on the provided evidence (restecg or cp).
 In summary, this code uses a Bayesian network to model relationships between health-related attributes and heart disease. It estimates the network's parameters from data and performs probabilistic queries to assess the likelihood of heart disease given specific evidence. It's a basic example of using probabilistic graphical models for medical diagnosis and risk assessment.
+
+
+OUTPUT :::::::
+
+Query 1 (q1):
+
+Query: Calculate the probability of 'target' (heart disease) given that 'restecg' (resting electrocardiographic results) is equal to 1.
+Results:
+P(target=0 | restecg=1) = 0.4354
+P(target=1 | restecg=1) = 0.5646
+This means that, based on the Bayesian network model and the evidence that the resting electrocardiographic results are 1, there's a 43.54% chance of not having heart disease (target=0) and a 56.46% chance of having heart disease (target=1).
+
+Query 2 (q2):
+
+Query: Calculate the probability of 'target' (heart disease) given that 'cp' (chest pain type) is equal to 2.
+Results:
+P(target=0 | cp=2) = 0.3832
+P(target=1 | cp=2) = 0.6168
+This means that, based on the Bayesian network model and the evidence that the chest pain type is 2, there's a 38.32% chance of not having heart disease (target=0) and a 61.68% chance of having heart disease (target=1).
+
+In both queries, the probabilities are calculated by considering the dependencies specified in the Bayesian network and the observed evidence. These results can be useful for making predictions or assessments related to heart disease based on the given evidence.
