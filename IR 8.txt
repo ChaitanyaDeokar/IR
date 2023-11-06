@@ -24,3 +24,44 @@ q2 = HeartDiseaseTestInfer.query(variables=['target'], evidence={'cp': 2})
 
 print(q1)
 print(q2)
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+Step 1: Import Necessary Libraries
+In this step, you import the required libraries and modules for data manipulation, Bayesian modeling, parameter estimation, and inference.
+
+Step 2: Read Data
+The code reads data from a CSV file named 'heart.csv' and stores it in a Pandas DataFrame named hd. This data likely contains information about various health-related attributes.
+
+Step 3: Define the Bayesian Network Model
+Here, you define a Bayesian network model named model. The model is represented as a set of edges (directed connections) between nodes. For example, ('age', 'target') means that 'age' is a parent node of 'target,' indicating that 'age' influences 'target.'
+
+Step 4: Estimate Parameters Using Maximum Likelihood Estimation (MLE)
+This step estimates the parameters (conditional probabilities) of the Bayesian network using Maximum Likelihood Estimation (MLE). MLE uses the data in hd to estimate the likelihood of different events or outcomes.
+
+Step 5: Create an Inference Object
+You create an inference object named HeartDiseaseTestInfer using the VariableElimination method from the pgmpy library. This object is used to perform queries on the Bayesian network.
+
+Step 6: Perform Queries
+You define two queries:
+q1: This query calculates the probability of 'target' (heart disease) given that 'restecg' (resting electrocardiographic results) is equal to 1.
+q2: This query calculates the probability of 'target' given that 'cp' (chest pain type) is equal to 2.
+
+Step 7: Print Results
+Finally, you print the results of the two queries. These results represent the probabilities of having heart disease based on the provided evidence (restecg or cp).
+In summary, this code uses a Bayesian network to model relationships between health-related attributes and heart disease. It estimates the network's parameters from data and performs probabilistic queries to assess the likelihood of heart disease given specific evidence. It's a basic example of using probabilistic graphical models for medical diagnosis and risk assessment.
