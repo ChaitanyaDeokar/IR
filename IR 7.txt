@@ -20,3 +20,33 @@ if matching_doc_ids:
         print(f"Document {doc_id}: {documents[doc_id]}")
 else:
     print(f"No matching documents found for the query: {query}")
+
+
+
+
+
+
+
+
+
+
+Certainly! This code creates an inverted index and allows you to search for documents that contain a specific query term. Let's break it down step by step:
+
+Import Libraries :
+We start by importing the defaultdict from the collections module, which is a convenient data structure for creating dictionaries with default values.
+
+Define a Collection of Documents:
+You have a collection of documents, each associated with a unique ID. These documents are represented as strings.
+
+Create an Inverted Index :
+An inverted index is created. This index maps words (tokens) to the IDs of documents that contain those words. For each document, the text is split into words, converted to lowercase, and each word is added to the inverted index along with the document ID(s) it appears in. The defaultdict ensures that the values are lists to which document IDs can be appended.
+
+User Input for Query :
+The user is prompted to input a query term.
+
+Search for Matching Documents:
+The code looks up the user's query term in the inverted index. If the query term is found, it retrieves the list of document IDs associated with it. The set is used to ensure that each document ID is unique.
+
+Display Results:
+If matching documents are found (i.e., if matching_doc_ids is not empty), it iterates through the document IDs and displays the corresponding document text. If no matching documents are found, it displays a message indicating that no matching documents were found for the query.
+In summary, this code creates an inverted index to quickly look up which documents contain specific words. When a user enters a query term, it retrieves and displays the documents that contain that term, or it notifies the user if there are no matching documents. It's a basic form of text retrieval and search.
